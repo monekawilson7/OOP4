@@ -43,6 +43,22 @@ namespace OOP4
             Rectangle rectangle = new Rectangle { Length = 4, Width =6};
             rectangle.DisplayShapeInfo();
             #endregion
+            #region Q2
+            IAuthenticationService authService = new BasicAuthenticationService();
+
+            string username = "Ahmed";
+            string password = "123";
+
+            bool isAuthenticated = authService.AuthenticateUser(username, password);
+            Console.WriteLine($"User {username} authenticated? {isAuthenticated}");
+
+            if (isAuthenticated)
+            {
+                bool isAuthorized = authService.AuthorizeUser(username, "Admin");
+                Console.WriteLine($"User {username} authorized as Admin? {isAuthorized}");
+            }
+            #endregion
+
         }
     }
 }
