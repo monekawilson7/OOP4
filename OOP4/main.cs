@@ -58,7 +58,18 @@ namespace OOP4
                 Console.WriteLine($"User {username} authorized as Admin? {isAuthorized}");
             }
             #endregion
+            #region Q3
+            INotificationService emailService = new EmailNotificationService();
+            INotificationService smsService = new SmsNotificationService();
+            INotificationService pushService = new PushNotificationService();
 
+            string recipient = "Ahmed";
+            string message = "Your order has been shipped";
+
+            emailService.SendNotification(recipient, message);
+            smsService.SendNotification(recipient, message);
+            pushService.SendNotification(recipient, message);
+            #endregion
         }
     }
 }
