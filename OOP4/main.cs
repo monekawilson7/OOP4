@@ -2,7 +2,7 @@
 
 namespace OOP4
 {
-    internal class Program
+    internal class main
     {
         static void Main(string[] args)
         {
@@ -37,7 +37,12 @@ namespace OOP4
             //c) By separating interface names with commas
             #endregion
             //part2
-
+            #region Q1
+            Circle circle = new Circle { Radius = 5};
+            circle.DisplayShapeInfo();
+            Rectangle rectangle = new Rectangle { Length = 4, Width =6};
+            rectangle.DisplayShapeInfo();
+            #endregion
         }
     }
 }
